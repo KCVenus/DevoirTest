@@ -61,7 +61,7 @@ if (poids > Poids15kg & poids <=Poids30kg){
     return somme = 33.40;  // prix pour 30kg
  }
  if (poids > Poids30kg & poids <0){
-     return "impossible";
+     return "impossible";  // marche pas :/
  }
  }
  function getInt(id) {
@@ -90,7 +90,7 @@ if (poids > Poids15kg & poids <=Poids30kg){
      TarrifH3.appendChild(window.document.createTextNode('Tarrif en g : '+ Tarrif));
      window.document.querySelector('#divH3').appendChild(TarrifH3);
     }else if(Tarrif === 0)
-    {
+    {                                           // pas ca non plus :/
         TarrifH3.innerHTML = "impossible";
     }else {
         TarrifH3.innerHTML = "Tarrif : " + Tarrif + "€";
