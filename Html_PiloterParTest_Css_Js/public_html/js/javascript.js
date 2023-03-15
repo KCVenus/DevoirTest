@@ -16,18 +16,24 @@ function GetTarrif(poids){
     const Poids30kg = 30000;
 
     
-    if(poids == Poids250g)
+    if(poids === Poids250g)
     {
         return 250;
     }
     
-    if (poids == Poids500g)
+    if (poids === Poids500g)
     {
         return 500;
     }
     
-    if (poids == Poids750g)
+    if (poids === Poids750g)
     {
-        return 750
+        return 750;
     }
+    
+    if (poids === Poids1kg)
+    {
+        return 1000;
+    }
+    
 }
