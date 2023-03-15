@@ -1,3 +1,19 @@
+ window.addEventListener("load", function () {
+    // Déclaration de l'index de parcours
+    let i;
+
+    // tabInputs est une collection de <input>
+    let tabInputs = window.document.querySelectorAll("input");
+
+    // Parcours de tabInputs en s'appuyant sur le nombre de <input>
+    for (i = 0; i < tabInputs.length; i++) {
+
+        // Ajout d'un Listener sur tous les <input> sur l'évènement onKeyUp
+        tabInputs[i].addEventListener("keyup",GetTarrif);
+    }
+}); 
+
+ 
  function premierTest(){
     return 1;
 }
@@ -100,3 +116,24 @@ if (poids > Poids15kg & poids <=Poids30kg){
     return somme = 33.40;  // prix pour 30kg
  }
  }
+ 
+ function GetTarrif(){
+    let poids = window.document.querySelector("#num_poids").value;
+    let GetTarrif = GetTarrif(poids);
+
+    s
+    fonctionGetTarrif(poids);
+    
+ }
+ 
+ 
+ function afficheGetTarrif (GetTarrif){
+    if(!window.document.querySelector('#TarrifH3')){
+     const TarrifH3 = window.document.createElement('h3');
+     TarrifH3.id = 'TarrifH3';
+     TarrifH3.appendChild(window.document.createTextNode('Tarrif en g : '+ GetTarrif));
+     window.document.querySelector('#divH3').appendChild(TarrifH3);
+    } else {
+        TarrifH3.innerHTML = "Tarrif : " + GetTarrif;
+    }
+}
