@@ -35,5 +35,9 @@ function GetTarrif(poids){
     {
         return 1000;
     }
+    if (poids === Poids2kg)
+    {
+        return 2000;
+    }
     
 }
