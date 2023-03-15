@@ -23,11 +23,11 @@ MesTestsUnitaires.prototype.testPoids500 = function (){
  MesTestsUnitaires.prototype.testPoids2000 = function (){
     assertEquals('test pour 2kg',2000, GetTarrif(2000));
  };
-// 
-// MesTestsUnitaires.prototype.test = function (){
-//     assertEquals('test pour 5kg',5000, GetTarrif(5000));
-// };
-// 
+ 
+ MesTestsUnitaires.prototype.testPoids5000 = function (){
+     assertEquals('test pour 5kg',5000, GetTarrif(5000));
+ };
+ 
 // MesTestsUnitaires.prototype.test = function (){
 //     assertEquals('test pour 10kg',10000, GetTarrif(10000));
 // };
