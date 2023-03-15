@@ -43,5 +43,9 @@ function GetTarrif(poids){
     {
         return 5000;
     }
+    if (poids === Poids10kg)
+    {
+        return 10000;
+    }
     
 }
