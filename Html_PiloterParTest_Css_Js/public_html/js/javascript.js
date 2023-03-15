@@ -6,19 +6,20 @@ function GetTarrif(poids){
     
     
     const Poids250g = 250;
-    const Poids500g = 250;
-    const Poids750g = 250;
-    const Poids1kg = 250;
-    const Poids2kg = 250;
-    const Poids5kg = 250;
-    const Poids10kg = 250;
-    const Poids15kg = 250;
-    const Poids30kg = 250;
+    const Poids500g = 500;
+    const Poids750g = 750;
+    const Poids1kg = 1000;
+    const Poids2kg = 2000;
+    const Poids5kg = 5000;
+    const Poids10kg = 10000;
+    const Poids15kg = 15000;
+    const Poids30kg = 30000;
 
     
-    if(Poids250g == poids)
+    if(poids == Poids250g)
     {
         return 250;
     }
+    
     
 }
