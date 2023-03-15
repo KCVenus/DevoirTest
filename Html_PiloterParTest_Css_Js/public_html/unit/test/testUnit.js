@@ -1,5 +1,5 @@
 MesTestsUnitaires = TestCase('JavaScritTP');
 
 MesTestsUnitaires.prototype.test = function () {   
-    assertEquals('test global', 0, premierTest());
+    assertEquals('test de fonctionnement', 0, premierTest());
 };
