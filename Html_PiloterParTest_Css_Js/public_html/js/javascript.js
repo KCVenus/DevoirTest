@@ -9,7 +9,7 @@
     for (i = 0; i < tabInputs.length; i++) {
 
         // Ajout d'un Listener sur tous les <input> sur l'évènement onKeyUp
-        tabInputs[i].addEventListener("keyup",GetTarrif);
+        tabInputs[i].addEventListener("keyup",Tarrif);
     }
 }); 
 
@@ -17,61 +17,6 @@
  function premierTest(){
     return 1;
 }
-//
-//function GetTarrif(poids){
-//    
-//    
-//    const Poids250g = 250;
-//    const Poids500g = 500;
-//    const Poids750g = 750;
-//    const Poids1kg = 1000;
-//    const Poids2kg = 2000;
-//    const Poids5kg = 5000;
-//    const Poids10kg = 10000;
-//    const Poids15kg = 15000;
-//    const Poids30kg = 30000;
-//
-//    
-//    if(poids === Poids250g)
-//    {
-//        return 250;
-//    }
-//    
-//    if (poids === Poids500g)
-//    {
-//        return 500;
-//    }
-//    
-//    if (poids === Poids750g)
-//    {
-//        return 750;
-//    }
-//    
-//    if (poids === Poids1kg)
-//    {
-//        return 1000;
-//    }
-//    if (poids === Poids2kg)
-//    {
-//        return 2000;
-//    }
-//    if (poids === Poids5kg)
-//    {
-//        return 5000;
-//    }
-//    if (poids === Poids10kg)
-//    {
-//        return 10000;
-//    }
-//    if (poids === Poids15kg)
-//    {
-//        return 15000;
-//    }
-//    if (poids === Poids30kg)
-//    {
-//        return 30000;
-//    }
-//}
 
 function GetTarrif(poids){
     
@@ -115,25 +60,39 @@ if (poids >Poids10kg & poids <= Poids15kg){
 if (poids > Poids15kg & poids <=Poids30kg){
     return somme = 33.40;  // prix pour 30kg
  }
+ if (poids > Poids30kg & poids <0){
+     return "impossible";
  }
+ }
+ function getInt(id) {
+    let valeur = parseInt(window.document.querySelector(id).value);
+    if (isNaN(valeur)) {
+        window.document.querySelector(id).value = 0;
+    return 0;
+    } else {
+        return valeur;
+    }
+}
+ function getString(id) {
+    return window.document.querySelector(id).value;
+}
  
- function GetTarrif(){
+ function Tarrif(){
     let poids = window.document.querySelector("#num_poids").value;
-    let GetTarrif = GetTarrif(poids);
-
-    s
-    fonctionGetTarrif(poids);
-    
+    let Tarrif = GetTarrif(poids);
+    afficheGetTarrif(Tarrif);
  }
  
- 
- function afficheGetTarrif (GetTarrif){
+ function afficheGetTarrif (Tarrif){
     if(!window.document.querySelector('#TarrifH3')){
      const TarrifH3 = window.document.createElement('h3');
      TarrifH3.id = 'TarrifH3';
-     TarrifH3.appendChild(window.document.createTextNode('Tarrif en g : '+ GetTarrif));
+     TarrifH3.appendChild(window.document.createTextNode('Tarrif en g : '+ Tarrif));
      window.document.querySelector('#divH3').appendChild(TarrifH3);
-    } else {
-        TarrifH3.innerHTML = "Tarrif : " + GetTarrif;
-    }
+    }else if(Tarrif === 0)
+    {
+        TarrifH3.innerHTML = "impossible";
+    }else {
+        TarrifH3.innerHTML = "Tarrif : " + Tarrif + "€";
+        }
 }
