@@ -1,3 +1,3 @@
  function premierTest(){
-    return 0;
+    return 1;
 }
