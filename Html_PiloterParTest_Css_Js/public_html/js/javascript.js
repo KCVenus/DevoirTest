@@ -26,4 +26,8 @@ function GetTarrif(poids){
         return 500;
     }
     
+    if (poids == Poids750g)
+    {
+        return 750
+    }
 }

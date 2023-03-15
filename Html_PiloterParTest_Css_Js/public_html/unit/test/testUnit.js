@@ -11,10 +11,10 @@ MesTestsUnitaires.prototype.testPoids250 = function (){
 MesTestsUnitaires.prototype.testpoids500 = function (){
     assertEquals('test pour 500g',500, GetTarrif(500));
 };
-// 
-// MesTestsUnitaires.prototype.test = function (){
-//     assertEquals('test pour 750g',750, GetTarrif(750));
-// };
+ 
+ MesTestsUnitaires.prototype.test = function (){
+    assertEquals('test pour 750g',750, GetTarrif(750));
+ };
 // 
 // MesTestsUnitaires.prototype.test = function (){
 //     assertEquals('test pour 1kg',1000, GetTarrif(1000));
